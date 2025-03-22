@@ -10,12 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_25_160403) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_27_042835) do
   create_table "carros", force: :cascade do |t|
     t.string "nombre"
     t.string "modelo"
     t.string "marca"
     t.integer "año_salida"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cars", force: :cascade do |t|
+    t.string "nombre_dueño"
+    t.string "modelo"
+    t.integer "año"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ciudads", force: :cascade do |t|
+    t.string "nombre"
+    t.integer "codigo_postal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -32,6 +47,13 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_25_160403) do
     t.string "nombre"
     t.string "apellido"
     t.integer "edad"
+    t.string "direccion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "restaurants", force: :cascade do |t|
+    t.string "nombre"
     t.string "direccion"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

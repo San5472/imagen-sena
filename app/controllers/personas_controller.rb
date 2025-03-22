@@ -1,10 +1,10 @@
-class familyController < ApplicationController
+class PersonasController < ApplicationController
     def show
-        personas = Personas.find(params[:id])
+        personas = Person.find(params[:id])
         render json: personas
     end
     def index
-        personas = Personas.all
+        personas = Person.all
         render json: personas
     end 
 end
